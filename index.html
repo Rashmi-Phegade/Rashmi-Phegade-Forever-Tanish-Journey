@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine, Tanish? ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffdde1);
+            background-size: 300% 300%;
+            animation: gradientBG 6s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 40px;
+            font-family: 'Pacifico', cursive;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+            margin-bottom: 30px;
+            font-weight: 500;
+            line-height: 1.5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 22px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: bold;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .yes {
+            background-color: #ff4081;
+            color: white;
+        }
+
+        .yes:hover {
+            background-color: #ff1e63;
+            transform: scale(1.1);
+            box-shadow: 0px 5px 20px rgba(255, 64, 129, 0.6);
+        }
+
+        .no {
+            background-color: #555;
+            color: white;
+        }
+
+        .no:hover {
+            background-color: #999;
+            transform: scale(1.1);
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Falling Heart Emojis */
+        .heart {
+            position: absolute;
+            top: -50px;
+            font-size: 30px;
+            animation: fall 5s infinite ease-in;
+            animation-delay: calc(-1s * var(--i)); /* Stagger hearts' falling speed */
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Create multiple hearts with different animation delays */
+        .heart:nth-child(1) { --i: 1; left: 10%; animation-duration: 6s; }
+        .heart:nth-child(2) { --i: 2; left: 20%; animation-duration: 5s; }
+        .heart:nth-child(3) { --i: 3; left: 30%; animation-duration: 7s; }
+        .heart:nth-child(4) { --i: 4; left: 40%; animation-duration: 6s; }
+        .heart:nth-child(5) { --i: 5; left: 50%; animation-duration: 5s; }
+        .heart:nth-child(6) { --i: 6; left: 60%; animation-duration: 8s; }
+        .heart:nth-child(7) { --i: 7; left: 70%; animation-duration: 6s; }
+        .heart:nth-child(8) { --i: 8; left: 80%; animation-duration: 7s; }
+        .heart:nth-child(9) { --i: 9; left: 90%; animation-duration: 6s; }
+    </style>
+</head>
+<body>
+
+    <!-- Falling Heart Emojis -->
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+    <div class="heart">❤️</div>
+
+    <div class="container">
+        <h1> Let’s begin this journey for Tanish. 💖💖💖</h1>
+        <p>Tanu + Ashish = Tanish 💕</p>
+        <div class="buttons">
+            <button class="yes" onclick="redirectPage('yes.html')">Yes</button>
+            <button class="no" onclick="redirectPage('no.html')">No</button>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="romantic-music.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        function redirectPage(page) {
+            // Redirect the user to the specific page (yes.html or no.html)
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>

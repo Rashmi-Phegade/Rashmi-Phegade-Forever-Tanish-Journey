@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh No... 💔</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #333, #444, #555);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 30px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        p {
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .crying-emoji {
+            font-size: 50px;
+        }
+
+        .heart {
+            font-size: 100px;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                color: black;
+            }
+            100% {
+                transform: scale(1.2);
+                color: #ff4d4d;
+            }
+        }
+
+        .continue-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background: #ff4d4d;
+            border-radius: 30px;
+            box-shadow: 0px 5px 15px rgba(214, 51, 132, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .continue-btn:hover {
+            background: #ff0000;
+            box-shadow: 0px 5px 25px rgba(214, 51, 132, 0.6);
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Oh no... You broke my heart! 💔</h1>
+        <p>Now I will cry forever 😭</p>
+        <p class="crying-emoji">💔😢💔</p>
+        <p>But it's okay... I still wish you happiness! 😊</p>
+
+        <!-- Black Heart Animation -->
+        <div class="heart">🖤</div>
+
+        <!-- Email Button -->
+        <a href="mailto:your_email@example.com?subject=Heartbroken Message&body=I'm feeling heartbroken. 😢" class="continue-btn">Send Message</a>
+    </div>
+
+</body>
+</html>
